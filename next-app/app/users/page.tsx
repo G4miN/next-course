@@ -3,7 +3,7 @@ import { User } from "../types/User";
 
 const UsersPage = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
-    cache: "no-cache", //  this is useful if i have date that not changes frequently
+    cache: "no-store", //  this is useful if i have date that not changes frequently
     // next: { revalidate: 10 }, //use this when u need to keep fresh data
 
     //note with axios u cant do this
@@ -17,6 +17,7 @@ const UsersPage = async () => {
   return (
     <>
       <h1>Users</h1>
+      <p>{new Date().toLocaleTimeString()}</p>
       <ul>
         {users.map((user) => (
           <li key={user.id}>{user.name}</li>
