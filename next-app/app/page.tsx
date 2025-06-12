@@ -3,10 +3,10 @@ import ProductCard from "./components/ProductCard";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <h1>Hello World</h1>
       <Link href="/users">➡️ users</Link>
       <ProductCard />
-    </main>
+    </div>
   );
 }

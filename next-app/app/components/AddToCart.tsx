@@ -3,13 +3,15 @@ import React from "react";
 
 const AddToCart = () => {
   return (
-    <button
-      onClick={() => {
-        console.log("Button clicked!");
-      }}
-    >
-      Add to cart
-    </button>
+    <div>
+      <button
+        onClick={() => {
+          console.log("Button clicked!");
+        }}
+      >
+        Add to cart
+      </button>
+    </div>
   );
 };
 
