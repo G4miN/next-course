@@ -2,7 +2,12 @@ import React from "react";
 import { User } from "../types/User";
 
 const UsersPage = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("https://jsonplaceholder.typicode.com/users", {
+    cache: "no-cache", //  this is useful if i have date that not changes frequently
+    // next: { revalidate: 10 }, //use this when u need to keep fresh data
+
+    //note with axios u cant do this
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch users");
